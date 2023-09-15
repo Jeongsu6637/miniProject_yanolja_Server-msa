@@ -1,11 +1,13 @@
 package com.example.practice.controller;
 
+import com.example.practice.domain.Entity.response.ReservationResponse;
 import com.example.practice.domain.request.ReservationCheckRequest;
 import com.example.practice.domain.request.ReservationSaveRequest;
 import com.example.practice.service.ReservationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -15,7 +17,12 @@ import java.util.Optional;
 public class ReservationController {
     private final ReservationService reservationService;
 
-    @PostMapping// 해당 방이 예약되어있는지 확인하는것 그럼 룸의 id와 날짜를 받아와서 있으면 불가 없으면 가능
+    @PostMapping("/history/{customerId}")
+    List<ReservationResponse> getById(@PathVariable("customerId") Long customerId){
+        return reservationService.getById(customerId);
+    }
+
+    @PostMapping("/check")// 해당 방이 예약되어있는지 확인하는것 그럼 룸의 id와 날짜를 받아와서 있으면 불가 없으면 가능
     Optional<Boolean> check(@RequestBody ReservationCheckRequest request){
         return reservationService.check(request);
     }
