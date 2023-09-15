@@ -3,7 +3,7 @@ package com.example.practice.domain.request;
 import com.example.practice.domain.Entity.Accomdation;
 
 public record AccomdationSaveRequest(
-        String accomdationName,
+            String accomdationName,
         String accomdationType,
         String accomdationLocation,
         Float accomdationGrade,
