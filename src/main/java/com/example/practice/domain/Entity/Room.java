@@ -16,7 +16,10 @@ public class Room {
     private Integer roomPrice; // 방 가격
     private Integer roomMaxPerson; // 방최대인원
     @Column(length = 10000)
-    private String roomImage; // 방 사진
+    private String roomImage1; // 방 사진1
+    private String roomImage2; // 방 사진2
+    private String roomImage3; // 방 사진3
+    private String roomImage4; // 방 사진4
     private String checkIn; //체크 인 시간
     private String checkOut; //체크 아웃 시간
     @ManyToOne

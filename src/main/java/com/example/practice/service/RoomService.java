@@ -31,7 +31,10 @@ public class RoomService {
                     room.getRoomName(),
                     room.getRoomPrice(),
                     room.getRoomMaxPerson(),
-                    room.getRoomImage(),
+                    room.getRoomImage1(),
+                    room.getRoomImage2(),
+                    room.getRoomImage3(),
+                    room.getRoomImage4(),
                     room.getCheckIn(),
                     room.getCheckOut()
             );

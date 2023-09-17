@@ -7,7 +7,10 @@ public record RoomSaveRequest(
         String roomName,
         Integer roomPrice,
         Integer roomMaxPerson,
-        String roomImage,
+        String roomImage1,
+        String roomImage2,
+        String roomImage3,
+        String roomImage4,
         String checkIn,
         String checkOut
 
@@ -19,7 +22,10 @@ public record RoomSaveRequest(
                 .roomName(roomName)
                 .roomPrice(roomPrice)
                 .roomMaxPerson(roomMaxPerson)
-                .roomImage(roomImage)
+                .roomImage1(roomImage1)
+                .roomImage2(roomImage2)
+                .roomImage3(roomImage3)
+                .roomImage4(roomImage4)
                 .checkIn(checkIn)
                 .checkOut(checkOut)
                 .build();

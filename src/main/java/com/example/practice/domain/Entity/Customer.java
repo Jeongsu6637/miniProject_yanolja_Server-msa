@@ -3,8 +3,6 @@ package com.example.practice.domain.Entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity @Getter @Builder
@@ -12,15 +10,10 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Customer {
-    @Id
+    @Id @GeneratedValue(strategy = GenerationType.UUID)
     private UUID customerId;
     private String email;
     private String phoneNumber;
-    private Integer wallet;
-
-    @PrePersist
-    public void prePersist() {
-        this.wallet = 100000;
-    }
+    private Integer wallet = 200000;
 
 }
