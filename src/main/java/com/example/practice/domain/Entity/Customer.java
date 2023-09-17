@@ -5,14 +5,15 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity @Getter @Builder
 @Table(name = "customers")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Customer {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long customerId;
+    @Id
+    private UUID customerId;
     private String email;
     private String phoneNumber;
     private Integer wallet;

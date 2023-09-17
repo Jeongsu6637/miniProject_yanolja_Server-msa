@@ -5,12 +5,14 @@ import com.example.practice.domain.request.ReservationCheckRequest;
 import com.example.practice.domain.request.ReservationSaveRequest;
 import com.example.practice.service.ReservationService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
+@Slf4j
 @RestController
 @RequestMapping("/api/v1/reservation")
 @CrossOrigin(methods = {RequestMethod.POST}, allowCredentials = "true", originPatterns = "*")
