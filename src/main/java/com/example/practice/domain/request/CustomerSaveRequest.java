@@ -7,6 +7,7 @@ import java.util.UUID;
 public record CustomerSaveRequest(
         UUID customerId,
         String email,
+        String name,
         String phoneNumber,
         Integer wallet
 
@@ -16,6 +17,7 @@ public record CustomerSaveRequest(
                 .builder()
                 .customerId(customerId)
                 .email(email)
+                .name(name)
                 .phoneNumber(phoneNumber)
                 .wallet(wallet)
                 .build();

@@ -15,7 +15,6 @@ public class Room {
     private String roomName; // 방이름 (스위트, 골드 디럭스)
     private Integer roomPrice; // 방 가격
     private Integer roomMaxPerson; // 방최대인원
-    @Column(length = 10000)
     private String roomImage1; // 방 사진1
     private String roomImage2; // 방 사진2
     private String roomImage3; // 방 사진3

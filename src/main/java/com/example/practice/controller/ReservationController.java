@@ -15,7 +15,6 @@ import java.util.Optional;
 @Slf4j
 @RestController
 @RequestMapping("/api/v1/reservation")
-@CrossOrigin(methods = {RequestMethod.POST}, allowCredentials = "true", originPatterns = "*")
 public class ReservationController {
     private final ReservationService reservationService;
 

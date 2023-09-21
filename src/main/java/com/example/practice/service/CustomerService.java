@@ -26,6 +26,7 @@ public class CustomerService {
             return new CustomerInfoResponse(
                     customer.getCustomerId(),
                     customer.getEmail(),
+                    customer.getName(),
                     customer.getPhoneNumber(),
                     customer.getWallet()
             );

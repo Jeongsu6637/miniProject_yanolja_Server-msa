@@ -11,8 +11,6 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/v1/customer")
-@CrossOrigin(methods = {RequestMethod.POST, RequestMethod.PUT}, allowCredentials = "true", originPatterns = "*")
-
 public class CustomerController {
     private final CustomerService customerService;
 
@@ -27,7 +25,7 @@ public class CustomerController {
     }
 
     @PutMapping("/update/{customerId}")
-    void delete(@PathVariable("customerId") UUID customerId,
+    void update(@PathVariable("customerId") UUID customerId,
                 @RequestParam("result") Integer wallet){
         customerService.update(customerId, wallet);
     }
